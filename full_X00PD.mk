@@ -12,6 +12,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_X00PD.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := X00PD
+PRODUCT_NAME := full_X00PD
+PRODUCT_BRAND := asus
+PRODUCT_MODEL := ASUS_X00PD
+PRODUCT_MANUFACTURER := asus
