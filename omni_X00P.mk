@@ -14,8 +14,12 @@
 # limitations under the License.
 #
 
+# Inherit Target Product stuff
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -26,8 +30,8 @@ PRODUCT_PACKAGES += \
     libcryptfs_hw
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := X00PD
-PRODUCT_NAME := full_X00PD
+PRODUCT_DEVICE := X00P
+PRODUCT_NAME := omni_X00P
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00PD
 PRODUCT_MANUFACTURER := asus
