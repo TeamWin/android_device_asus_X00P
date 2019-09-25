@@ -90,6 +90,7 @@ RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
+TW_USE_TOOLBOX := true
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
