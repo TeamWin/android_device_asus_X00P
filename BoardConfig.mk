@@ -48,6 +48,7 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 PLATFORM_SECURITY_PATCH := 2029-10-01
 PLATFORM_VERSION := 9
 
