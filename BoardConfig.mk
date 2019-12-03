@@ -92,6 +92,10 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 TW_USE_TOOLBOX := true
 
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
 
