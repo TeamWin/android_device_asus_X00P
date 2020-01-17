@@ -35,3 +35,9 @@ PRODUCT_NAME := omni_X00P
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00PD
 PRODUCT_MANUFACTURER := asus
+
+# Blacklist Properties
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.product.carrier \
+    ro.build.date \
+    ro.build.date.utc
