@@ -24,6 +24,7 @@ jobs:
            git config --global color.ui false
            repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b ${TWRP_MANIFEST}
            repo sync
+           rm -rf bootable/recovery && git clone -b android-9.0 https://github.com/omnirom/android_bootable_recovery bootable/recovery
            git clone https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME} -b ${CIRCLE_BRANCH} device/${VENDOR}/${DEVICE}
            export ALLOW_MISSING_DEPENDENCIES=true
            export LC_ALL=C
