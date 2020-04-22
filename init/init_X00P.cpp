@@ -39,10 +39,23 @@
 namespace android {
 namespace init {
 
+void load_properties(const char *msm) {
+    property_set("ro.product.board", msm);
+}
+
 void vendor_load_properties() {
     property_set("ro.build.date", "Fri Jul 20 15:18:00 CST 2018");
     property_set("ro.build.date.utc", "1532071080");
     property_set("ro.product.carrier", "ASUS-ASUS_X00P-WW");
+    std::string platform_type = android::base::GetProperty("ro.boot.platformtype", "");
+    if (platform_type == "msm8917")
+    {
+        load_properties("MSM8917");
+    }
+    else
+    {
+        load_properties("MSM8937");
+    }
 }
 
 }  // namespace init
