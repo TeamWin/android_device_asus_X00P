@@ -5,5 +5,13 @@ service set-old-build /sbin/set-old-build.sh
     oneshot
     seclabel u:r:recovery:s0
 
+service set-product-carrier /sbin/set-product-carrier.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on boot
     start set-old-build
+    start set-product-carrier
