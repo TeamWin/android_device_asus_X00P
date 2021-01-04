@@ -12,6 +12,14 @@ service set-product-carrier /sbin/set-product-carrier.sh
     oneshot
     seclabel u:r:recovery:s0
 
+service set-product-board /sbin/set-product-board.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on boot
     start set-old-build
     start set-product-carrier
+    start set-product-board
