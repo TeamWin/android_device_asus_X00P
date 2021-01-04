@@ -1,0 +1,9 @@
+service set-old-build /sbin/set-old-build.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    start set-old-build
